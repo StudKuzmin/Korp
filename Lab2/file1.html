@@ -1,0 +1,50 @@
+<html>
+<script>
+
+
+function addRow(){
+	var table = document.getElementById('myTable');
+
+	var x = table.insertRow(0);
+	var e = table.rows.length-1;
+	var l = table.rows[e].cells.length;
+
+	for (var c = 0,  m=l; c < m; c++) {
+		table.rows[0].insertCell(c);
+		table.rows[0].cells[c].innerHTML  = l;
+	}
+
+}
+
+</script>
+
+
+
+
+<style>
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} 
+</style>
+
+
+<div class="center"> 
+<input type="button" value="row +" onClick="addRow()" border=0       style='cursor:hand'>
+<table id = 'myTable' border="1" width="600">
+    <tr>
+      <th>Ячейка 1</td>
+      <th>Ячейка 2</td>
+      <th>Ячейка 3</td>
+    </tr>
+</table>
+</div>
+
+
+</html>
+
+
