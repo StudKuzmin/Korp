@@ -1,0 +1,73 @@
+<script>
+function addStr() {
+    var table = document.getElementById('myTable');
+    var addTr = document.createElement("tr");
+    var addTd = document.createElement("td");
+
+	var n1 = document.getElementById("name1").value;
+	var n2 = document.getElementById("name2").value;
+	var n3= document.getElementById("name3").value;
+	
+	let names = [n1, n2, n3];
+	
+	for (var c = 0; c < 3; c++) {
+		var addTd = document.createElement("td");
+		addTd.innerHTML = names[c];
+		addTr.appendChild(addTd);
+		table.appendChild(addTr);
+	}
+}
+</script>
+
+<script>
+function deleteStr() {
+    var table = document.getElementById('myTable');
+    table.deleteRow(-1);
+}
+</script>
+
+
+
+<style>
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} 
+</style>
+<style>
+.centerNames {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 24%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} 
+</style>
+
+
+
+<html>
+<div class="centerNames">
+<p><input type='text' value='name1' id='name1'></p>
+<p><input type='text' value='name2' id='name2'></p>
+<p><input type='text' value='name3' id='name3'></p>
+
+<input type='button' value='ADD' onclick="addStr()">
+<input type='button' value='DELETE' onclick="deleteStr()">
+</div>
+
+<div class="center">
+<table id = 'myTable' border="1" width="600">
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+</table>
+</div>
+</html>
