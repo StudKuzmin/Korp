@@ -1,0 +1,2 @@
+javac.exe jsp\WEB-INF\classes\controller\*.java -classpath ".\jsp\WEB-INF\classes;D:\Prgrms\glassfish6\glassfish\lib\javaee.jar; C:\Users\ahgin\OneDrive\Рабочий стол\Lab2 — копия\JSP\mysql-connector-java-8.0.25.jar"
+pause
